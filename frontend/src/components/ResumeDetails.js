@@ -1,4 +1,6 @@
 import { useState, useEffect} from "react";
+import { useParams} from "react-router-dom";
+import styles from './ResumeSnippet.module.css'
     
 const ResumeDetails = () => {
     const {id} = useParams();

@@ -10,5 +10,6 @@ const ResumeSnippet = ({resume}) => {
             </Link>
         </div>
     )
+}
 
 export default ResumeSnippet;
