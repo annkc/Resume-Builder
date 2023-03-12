@@ -1,8 +1,10 @@
 const express = require('express');
 const resumeRoutes = require('./routes/resumes');
+const cors = require('cors');
 
 // now we're making an app
 const app = express();
+app.use(cors());
 
 // getting mongo yay
 const mongoose = require('mongoose');

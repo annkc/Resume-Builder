@@ -3,6 +3,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const resumeSchema = new Schema({
+    title: {
+        type: String,
+        required: true
+    },
     name: {
         type: String,
         required: true
@@ -43,6 +47,6 @@ const resumeSchema = new Schema({
         type: Array,
         required: false
     }
-})
+}, { timestamps: true })
 
 module.exports = mongoose.model('resume', resumeSchema);

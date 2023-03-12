@@ -28,10 +28,10 @@ const getResumes = async(req, res) => {
 
 
 const postResume = async(req, res) => {
-    const {name, phoneNumber, email, website, education, objectives, workExperience, projects, extraCurricularActivities, awardsAndAchievements} = req.body;
+    const {title, name, phoneNumber, email, website, education, objectives, workExperience, projects, extraCurricularActivities, awardsAndAchievements} = req.body;
 
     try {
-        const resume = await Resume.create({name, phoneNumber, email, website, education, objectives, workExperience, projects, extraCurricularActivities, awardsAndAchievements});
+        const resume = await Resume.create({title, name, phoneNumber, email, website, education, objectives, workExperience, projects, extraCurricularActivities, awardsAndAchievements});
         res.status(200).json(resume);
     } catch (error) {
         res.status(400).json({error: error.message});
