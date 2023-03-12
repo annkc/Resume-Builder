@@ -3,6 +3,7 @@ import About from './pages/About'
 import Home from './pages/Home'
 import ResumeBuilder from './pages/ResumeBuilder'
 import Resumes from './pages/Resumes'
+import ResumeDetails from './components/ResumeDetails'
 import NoPage from './pages/NoPage'
 import NavBar from './components/NavBar'
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/about" element={<About />} />=======
           <Route path="/create-resume" element={<ResumeBuilder />} />
           <Route path="/resumes" element={<Resumes />} />
+          <Route exact path="/resume/:id" element={<ResumeDetails />}></Route>
           <Route path="*" element={<NoPage />} />
         </Routes>
         </div>

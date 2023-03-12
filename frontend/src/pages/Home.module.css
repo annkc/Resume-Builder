@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+.home body {
+    margin: 0px;
+    min-height: 643px;
+    width: 100%;
+    background-image: url('/src/pages/images/bg_img.png');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .main_title {
+
     font-family: 'Lexend', sans-serif;
     display: flex;
     padding-top: 150px;
@@ -22,7 +34,6 @@
     background: rgb(0,9,50);
     background: linear-gradient(90deg, rgba(9,30,121,1) 0%, rgb(12, 104, 175) 40%, rgb(0, 136, 255) 100%);
     background-color: rgb(255, 189, 114);
-    border-color: rgb(0,9,50);
     border: none;
     border-radius: 5px;
     font-family: 'Lexend', sans-serif;

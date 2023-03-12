@@ -3,12 +3,14 @@ body {
 }
 
 .resumes h2 {
-    padding-left: 15px;
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+
 }
 .resumes {
     display: grid;
     grid-template-rows: auto;
-    align-items: center;
     gap: 50px;
     padding: 15px;
     justify-content: space-between;

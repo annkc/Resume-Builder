@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import ResumeDetails from '../components/ResumeDetails';
+import ResumeSnippet from '../components/ResumeSnippet';
+import {Link} from 'react-router-dom';
 import styles from './Resumes.module.css'
 
 
@@ -17,14 +18,13 @@ const Resumes = () => {
         }
 
         fetchResumes();
-        console.log("resumes", resumes);
     }, [])
 
     return (
         <div className={styles.resumes}>
             <h2>Resume Viewer</h2>
             {resumes && resumes.map((resume) => {
-                return <ResumeDetails key={resume._id} resume={ resume }/>
+                return <ResumeSnippet key={resume._id} resume={ resume }/>
             }
             )}
         </div>

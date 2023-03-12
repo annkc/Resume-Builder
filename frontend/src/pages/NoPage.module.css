@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+.noPage {
+    margin: 0;
+    align-items: center;
+}
+.error_title {
+    display: flex;
+    justify-content: center;
+    padding-left: 100px;
+    font-size: 25px;
+}
+.error_message {
+    display: flex;
+    justify-content: center;
+    padding-left: 100px;
+    font-family: 'Lexend', sans-serif;
+}
+
+.noPage img {
+    align-items: center;
+    padding-left: 550px;
+    height: 500px;
+}
