@@ -1,5 +1,6 @@
 import styles from './ResumeSnippet.module.css'
 import {Link} from 'react-router-dom';
+
 const ResumeSnippet = ({resume}) => {
     return (
         <div className={styles.resume_snippet}>
@@ -9,6 +10,5 @@ const ResumeSnippet = ({resume}) => {
             </Link>
         </div>
     )
-}
 
 export default ResumeSnippet;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import ResumeSnippet from '../components/ResumeSnippet';
-import {Link} from 'react-router-dom';
+
 import styles from './Resumes.module.css'
 
 

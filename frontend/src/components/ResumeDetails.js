@@ -1,11 +1,9 @@
-import styles from './ResumeSnippet.module.css'
-import {Link, useParams} from 'react-router-dom';
 import { useState, useEffect} from "react";
-
+    
 const ResumeDetails = () => {
     const {id} = useParams();
     const [resume, setResume] = useState(null);
-
+    
     const fetchResume = async () => {
         console.log("fetching....")
         const response = await fetch('/api/resumes/' + id);
@@ -14,12 +12,12 @@ const ResumeDetails = () => {
             setResume(json);
         }
     }
-
+    
     useEffect(() => {
         console.log("in ue")
         fetchResume();
     }, [])
-
+    
     return (
         <div className={styles.resume_details}>
             <h4>{resume && resume.title}</h4>
@@ -29,10 +27,10 @@ const ResumeDetails = () => {
             <p><strong>Website: </strong> {resume && resume.website}</p>
             <p><strong>Education: </strong> {resume && resume.education}</p>
         </div>
-        // <div className="">
-        //     <div className="">Hiii</div>
-        // </div>
+            // <div className="">
+            //     <div className="">Hiii</div>
+            // </div>
+
     )
 }
-
 export default ResumeDetails;
