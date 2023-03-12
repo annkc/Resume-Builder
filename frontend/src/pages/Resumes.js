@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import ResumeDetails from '../components/ResumeDetails';
+import ResumeSnippet from '../components/ResumeSnippet';
 import styles from './Resumes.module.css'
 
 
@@ -24,7 +24,7 @@ const Resumes = () => {
         <div className={styles.resumes}>
             <h2>Resume Viewer</h2>
             {resumes && resumes.map((resume) => {
-                return <ResumeDetails key={resume._id} resume={ resume }/>
+                return <ResumeSnippet key={resume._id} resume={ resume }/>
             }
             )}
         </div>

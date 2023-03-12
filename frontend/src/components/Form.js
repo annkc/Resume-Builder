@@ -68,7 +68,7 @@ export default function Form() {
     const [awardsAndAchievements_2, setAwardsAndAchievements_2] = useState('');
     const [awardsAndAchievements_3, setAwardsAndAchievements_3] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const objectives = Array(objective_1, objective_2);
         const workExperience = Array(workExperience_1, workExperience_1a, workExperience_1b, workExperience_1c, workExperience_1d, workExperience_1e,
@@ -82,14 +82,17 @@ export default function Form() {
             extraCurricularActivity_3, extraCurricularActivity_3a, extraCurricularActivity_3b, extraCurricularActivity_3c, extraCurricularActivity_3d, extraCurricularActivity_3e);
         const awardsAndAchievements = Array(awardsAndAchievements_1, awardsAndAchievements_2, awardsAndAchievements_3);
         const resume = { title, name, phoneNumber, email, website, education, objectives, workExperience, projects, extraCurricularActivities, awardsAndAchievements }
-
-        fetch('/api/resumes', {
+        console.log(resume);
+        console.log(JSON.stringify(resume));
+        
+        const festchReponse = await fetch('/api/resumes', {
             method: 'POST',
             header: { "Content-Type": "application/json" },
             body: JSON.stringify(resume)
         }).then(() => {
             console.log('new resume added');
         })
+        
         
     }
 

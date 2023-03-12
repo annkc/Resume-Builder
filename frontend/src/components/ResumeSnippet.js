@@ -1,5 +1,5 @@
-import styles from './ResumeDetails.module.css'
-const ResumeDetails = ({resume}) => {
+import styles from './ResumeSnippet.module.css'
+const ResumeSnippet = ({resume}) => {
     return (
         <div className={styles.resume_details}>
             <h4>{resume.title}</h4>
@@ -8,4 +8,4 @@ const ResumeDetails = ({resume}) => {
     )
 }
 
-export default ResumeDetails;
+export default ResumeSnippet;
