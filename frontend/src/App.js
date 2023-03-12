@@ -10,7 +10,8 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <NavBar/>
+      <NavBar></NavBar>
+      <div className="pages">
         <Routes>
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
@@ -19,6 +20,7 @@ function App() {
           <Route path="/resumes" element={<Resumes />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
+        </div>
       </BrowserRouter>
     </div>
   );
