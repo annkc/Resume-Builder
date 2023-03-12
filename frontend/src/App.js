@@ -15,12 +15,12 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/create" element={<ResumeBuilder />} />
+          <Route path="/about" element={<About />} />=======
+          <Route path="/create-resume" element={<ResumeBuilder />} />
           <Route path="/resumes" element={<Resumes />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
-      </div>
+        </div>
       </BrowserRouter>
     </div>
   );
