@@ -68,9 +68,34 @@ export default function Form() {
     const [awardsAndAchievements_2, setAwardsAndAchievements_2] = useState('');
     const [awardsAndAchievements_3, setAwardsAndAchievements_3] = useState('');
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const objectives = Array(objective_1, objective_2);
+        const workExperience = Array(workExperience_1, workExperience_1a, workExperience_1b, workExperience_1c, workExperience_1d, workExperience_1e,
+            workExperience_2, workExperience_2a, workExperience_2b, workExperience_2c, workExperience_2d, workExperience_2e,
+            workExperience_3, workExperience_3a, workExperience_3b, workExperience_3c, workExperience_3d, workExperience_3e);
+        const projects = Array(project_1, project_1a, project_1b, project_1c, project_1d, project_1e,
+            project_2, project_2a, project_2b, project_2c, project_2d, project_2e,
+            project_3, project_3a, project_3b, project_3c, project_3d, project_3e);
+        const extraCurricularActivities = Array(extraCurricularActivity_1, extraCurricularActivity_1a, extraCurricularActivity_1b, extraCurricularActivity_1c, extraCurricularActivity_1d, extraCurricularActivity_1e,
+            extraCurricularActivity_2, extraCurricularActivity_2a, extraCurricularActivity_2b, extraCurricularActivity_2c, extraCurricularActivity_2d, extraCurricularActivity_2e,
+            extraCurricularActivity_3, extraCurricularActivity_3a, extraCurricularActivity_3b, extraCurricularActivity_3c, extraCurricularActivity_3d, extraCurricularActivity_3e);
+        const awardsAndAchievements = Array(awardsAndAchievements_1, awardsAndAchievements_2, awardsAndAchievements_3);
+        const resume = { title, name, phoneNumber, email, website, education, objectives, workExperience, projects, extraCurricularActivities, awardsAndAchievements }
+
+        fetch('/api/resumes', {
+            method: 'POST',
+            header: { "Content-Type": "application/json" },
+            body: JSON.stringify(resume)
+        }).then(() => {
+            console.log('new resume added');
+        })
+        
+    }
+
     return <div className={styles.form}>
         <h3>Let's build a resume!</h3>
-        <form>
+        <form onSubmit={handleSubmit}>
             <label>Resume title:</label>
             <input
                 type="text"
@@ -115,14 +140,12 @@ export default function Form() {
             <label>Objective 1:</label>
             <input
                 type="text"
-                required
                 value={objective_1}
                 onChange={(e) => setObjective_1(e.target.value)}
             />
             <label>Objective 2:</label>
             <input
                 type="text"
-                required
                 value={objective_2}
                 onChange={(e) => setObjective_2(e.target.value)}
             />
