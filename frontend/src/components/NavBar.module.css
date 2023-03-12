@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+.nav_container {
+    display: flex;
+    align-items: center;
+    background-color: rgb(241, 241, 241);
+    font-family: 'Lexend', sans-serif;
+    background: rgb(0,9,50);
+    background: linear-gradient(90deg, rgba(0,9,50,1) 0%, rgba(9,30,121,1) 40%, rgba(0,212,255,1) 100%);
+}
+
+.nav_container img {
+    height: 50px;
+    padding-left: 25px;
+}
+
+.site_title a {
+    display: flex;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    padding-left: 20px;
+    padding-bottom: 0px;
+}
+
+.links li {
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.links a {
+    padding: 10px;
+    font-weight: bold;
+    color:rgb(255, 214, 157);
+    text-decoration: none;
+
+}
+
+.links a:hover {
+    color: rgb(255, 166, 122);
+}
+

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+.main_title {
+    font-family: 'Lexend', sans-serif;
+    display: flex;
+    padding-top: 150px;
+    font-size: 30px;
+    justify-content: center;
+
+}
+
+.buttons {
+    
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    justify-content: space-evenly;
+
+}
+.home button {
+    color: white;
+    display: inline;
+    background: rgb(0,9,50);
+    background: linear-gradient(90deg, rgba(9,30,121,1) 0%, rgb(12, 104, 175) 40%, rgb(0, 136, 255) 100%);
+    background-color: rgb(255, 189, 114);
+    border-color: rgb(0,9,50);
+    border: none;
+    border-radius: 5px;
+    font-family: 'Lexend', sans-serif;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.home button:hover {
+    cursor: pointer;
+    color: rgb(255, 215, 141);
+    translate: 0px 3px;
+}
