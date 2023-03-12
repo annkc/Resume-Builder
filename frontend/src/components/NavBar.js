@@ -1,6 +1,8 @@
+import styles from './NavBar.module.css'
+
 export default function NavBar() {
-    return <nav className="nav">
-        <a href="/" className="site-name">Catch A Job</a>
+    return <nav className={styles.nav}>
+        <a href="/" className={styles.site_name}>Catch A Job</a>
         <ul>
             <li>
                 <a href="/home">Home</a>
