@@ -35,7 +35,7 @@ const resumeSchema = new Schema({
         type: Array,
         required: false
     },
-    extracCurricularActivities: {
+    extraCurricularActivities: {
         type: Array,
         required: false
     },
