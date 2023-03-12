@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(244, 244, 244);
+}
+
+.resumes h2 {
+    padding-left: 15px;
+}
+.resumes {
+    display: grid;
+    grid-template-rows: auto;
+    align-items: center;
+    gap: 50px;
+    padding: 15px;
+    justify-content: space-between;
+    background-color: rgb(242, 242, 242);
+}
