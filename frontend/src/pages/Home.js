@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import styles from './Home.module.css'
 
 const Home = () => {
@@ -8,8 +9,12 @@ const Home = () => {
                 <h1>Resume Builder</h1>
             </div>
             <div className={styles.buttons}>
-                <button>Get Started</button>
-                <button>View Resumes</button>
+                <Link to="/create-resume">
+                    <button>Get Started</button>
+                </Link>
+                <Link to="/resumes">
+                    <button>View Resumes</button>
+                </Link>
             </div>
             </body>
         </div>

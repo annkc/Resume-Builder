@@ -28,6 +28,11 @@
     justify-content: space-evenly;
 
 }
+
+.buttons a {
+    text-decoration: none;
+}
+
 .home button {
     color: white;
     display: inline;
