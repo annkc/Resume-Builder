@@ -8,7 +8,7 @@ const ResumeDetails = () => {
     
     const fetchResume = async () => {
         console.log("fetching....")
-        const response = await fetch('/api/resumes/' + id);
+        const response = await fetch('http://localhost:4000/api/resumes/' + id);
         const json = await response.json();
         if (response.ok) {
             setResume(json);

@@ -9,7 +9,7 @@ const Resumes = () => {
 
     useEffect(() => {
         const fetchResumes = async () => {
-            const response = await fetch('/api/resumes');
+            const response = await fetch('http://localhost:4000/api/resumes');
             const json = await response.json();
     
             if (response.ok) {

@@ -85,7 +85,7 @@ export default function Form() {
         console.log(resume);
         console.log(JSON.stringify(resume));
         
-        const festchReponse = await fetch('/api/resumes', {
+        const fetchResponse = await fetch('/api/resumes', {
             method: 'POST',
             header: { "Content-Type": "application/json" },
             body: JSON.stringify(resume)
