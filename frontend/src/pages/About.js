@@ -1,10 +1,13 @@
+import styles from './About.module.css'
+
 const About = () => {
     return (
-        <div className="about">
+        <div className={styles.about}>
             <h2>About Resume Builder</h2>
-            <p>Created by Anneka Chen and Tammie Liang</p>
+            <p>By <span className={styles.names}>Anneka Chen</span> and <span className={styles.names}>Tammie Liang</span></p>
+            <p>For <span className={styles.bcit}>BCIT's</span> <span className={styles.hackathon}>Hack the Break 2023</span></p>
             <p>Created with MERN</p>
-            <p>2023-03-12</p>
+            <p>Started 2023-03-12</p>
         </div>
     )
 }

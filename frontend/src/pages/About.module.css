@@ -1,0 +1,28 @@
+.about h2 {
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+
+}
+
+.about p {
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+
+}
+
+.names {
+    font-size: 20px;
+    color: rgb(0, 136, 255);
+}
+
+.bcit {
+    font-size: 20px;
+    color: rgb(9,30,121)
+}
+
+.hackathon {
+    font-size: 20px;
+    color: #f1ad2d;
+}
