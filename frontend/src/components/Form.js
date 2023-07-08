@@ -65,8 +65,11 @@ export default function Form() {
     const [extraCurricularActivity_3d, setExtraCurricularActivity_3d] = useState('');
     const [extraCurricularActivity_3e, setExtraCurricularActivity_3e] = useState('');
     const [awardsAndAchievements_1, setAwardsAndAchievements_1] = useState('');
+    const [awardsAndAchievements_1a, setAwardsAndAchievements_1a] = useState('');
     const [awardsAndAchievements_2, setAwardsAndAchievements_2] = useState('');
+    const [awardsAndAchievements_2a, setAwardsAndAchievements_2a] = useState('');
     const [awardsAndAchievements_3, setAwardsAndAchievements_3] = useState('');
+    const [awardsAndAchievements_3a, setAwardsAndAchievements_3a] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -80,7 +83,7 @@ export default function Form() {
         const extraCurricularActivities = Array(extraCurricularActivity_1, extraCurricularActivity_1a, extraCurricularActivity_1b, extraCurricularActivity_1c, extraCurricularActivity_1d, extraCurricularActivity_1e,
             extraCurricularActivity_2, extraCurricularActivity_2a, extraCurricularActivity_2b, extraCurricularActivity_2c, extraCurricularActivity_2d, extraCurricularActivity_2e,
             extraCurricularActivity_3, extraCurricularActivity_3a, extraCurricularActivity_3b, extraCurricularActivity_3c, extraCurricularActivity_3d, extraCurricularActivity_3e);
-        const awardsAndAchievements = Array(awardsAndAchievements_1, awardsAndAchievements_2, awardsAndAchievements_3);
+        const awardsAndAchievements = Array(awardsAndAchievements_1, awardsAndAchievements_1a, awardsAndAchievements_2, awardsAndAchievements_2a, awardsAndAchievements_3, awardsAndAchievements_3a);
         const resume = { title, name, phoneNumber, email, website, education, objectives, workExperience, projects, extraCurricularActivities, awardsAndAchievements }
         console.log(resume);
         console.log(JSON.stringify(resume));
@@ -397,6 +400,8 @@ export default function Form() {
                 onChange={(e) => setAwardsAndAchievements_1(e.target.value)}
             />
             <textarea
+                value={awardsAndAchievements_1a}
+                onChange={(e) => setAwardsAndAchievements_1a(e.target.value)}
             ></textarea>
             <label>Awards/Achievement 2:</label>
             <input
@@ -405,6 +410,8 @@ export default function Form() {
                 onChange={(e) => setAwardsAndAchievements_2(e.target.value)}
             />
             <textarea
+                value={awardsAndAchievements_2a}
+                onChange={(e) => setAwardsAndAchievements_2a(e.target.value)}
             ></textarea>
             <label>Awards/Achievement 3:</label>
             <input
@@ -413,6 +420,8 @@ export default function Form() {
                 onChange={(e) => setAwardsAndAchievements_3(e.target.value)}
             />
             <textarea
+                value={awardsAndAchievements_3a}
+                onChange={(e) => setAwardsAndAchievements_3a(e.target.value)}
             ></textarea>
             <h4>Click to finish!</h4>
             <button>Create Resume</button>
