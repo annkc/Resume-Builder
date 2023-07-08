@@ -88,9 +88,9 @@ export default function Form() {
         console.log(resume);
         console.log(JSON.stringify(resume));
         
-        const fetchResponse = await fetch('/api/resumes', {
+        const fetchResponse = await fetch('http://localhost:4000/api/resumes/', {
             method: 'POST',
-            header: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(resume)
         }).then(() => {
             console.log('new resume added');
