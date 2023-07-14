@@ -19,6 +19,10 @@ const ResumeDetails = () => {
         console.log("in ue")
         fetchResume();
     }, [])
+
+    function toListItem(str) {
+        return (<li> {str} </li>);
+    }
     
     const toReturn =
         <div className={styles.resume_details} id="resume">
@@ -32,8 +36,9 @@ const ResumeDetails = () => {
 
             {(resume && (resume.objectives[0] !== "" || resume.objectives[1] !== "")) && <br></br>}
             <p><strong>{(resume && (resume.objectives[0] !== "" || resume.objectives[1] !== "")) && "Objectives:"}</strong></p>
-            <p>{(resume && resume.objectives[0] !== "") && resume.objectives[0]}</p>
-            <p>{(resume && resume.objectives[1] !== "") && resume.objectives[1]}</p>
+            {resume && resume.objectives.map((objective) => {
+                return (<p> {objective} </p>);
+            })}
 
 
             {(resume && (resume.workExperience[0] !== "" || resume.workExperience[6] !== "" || resume.workExperience[12] !== "")) && <br></br>}
