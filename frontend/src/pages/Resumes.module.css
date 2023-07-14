@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
 body {
     background-color: rgb(244, 244, 244);
 }
@@ -9,6 +11,7 @@ body {
 
 }
 .resumes {
+    font-family: 'Lexend', sans-serif;
     display: grid;
     grid-template-rows: auto;
     gap: 50px;

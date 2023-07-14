@@ -1,6 +1,6 @@
 import { useState, useEffect} from "react";
 import { useParams} from "react-router-dom";
-import styles from './ResumeSnippet.module.css'
+import styles from './ResumeDetails.module.css'
 import listItem from './Form'
     
 const ResumeDetails = () => {
@@ -33,7 +33,7 @@ const ResumeDetails = () => {
     }
     
     const toReturn =
-        <div className={styles.resume_details} id="resume">
+        <div className={styles.resume_details}>
             <h4>{resume && resume.title}</h4>
             <p><strong>Created at:</strong> {resume && resume.createdAt}</p>
             <p><strong>Name: </strong> {resume && resume.phoneNumber}</p>

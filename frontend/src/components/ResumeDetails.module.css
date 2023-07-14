@@ -1,1 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+* {
+    margin:0;
+}
+
+.resume_details a {
+    text-decoration: none;
+}
+.resume_details {
+    font-family: 'Lexend', sans-serif;
+    text-decoration: none;
+    width: 130%;
+    height: 100%;
+    /* background-color: white; */
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

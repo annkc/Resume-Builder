@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+.resumeBuilder {
+    font-family: 'Lexend', sans-serif;
+}
+
 .resumeBuilder h2 {
     text-align: center;
     padding: 15px;
