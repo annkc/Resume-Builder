@@ -1,6 +1,27 @@
 import styles from './Form.module.css'
 import { useState } from "react";
 
+
+class listItem {
+
+    title;
+    details;
+
+    constructor(title, details) {
+      this.title = title;
+      this.details = details;
+    }
+
+    // getTitle() {
+    //   return this.#title;
+    // }
+
+    // getDetails() {
+    //   return this.#details;
+    // }
+  }
+
+
 export default function Form() {
     const [title, setTitle] = useState('');
     const [name, setName] = useState('');
@@ -74,16 +95,18 @@ export default function Form() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const objectives = Array(objective_1, objective_2);
-        const workExperience = Array(workExperience_1, workExperience_1a, workExperience_1b, workExperience_1c, workExperience_1d, workExperience_1e,
-            workExperience_2, workExperience_2a, workExperience_2b, workExperience_2c, workExperience_2d, workExperience_2e,
-            workExperience_3, workExperience_3a, workExperience_3b, workExperience_3c, workExperience_3d, workExperience_3e);
-        const projects = Array(project_1, project_1a, project_1b, project_1c, project_1d, project_1e,
-            project_2, project_2a, project_2b, project_2c, project_2d, project_2e,
-            project_3, project_3a, project_3b, project_3c, project_3d, project_3e);
-        const extraCurricularActivities = Array(extraCurricularActivity_1, extraCurricularActivity_1a, extraCurricularActivity_1b, extraCurricularActivity_1c, extraCurricularActivity_1d, extraCurricularActivity_1e,
-            extraCurricularActivity_2, extraCurricularActivity_2a, extraCurricularActivity_2b, extraCurricularActivity_2c, extraCurricularActivity_2d, extraCurricularActivity_2e,
-            extraCurricularActivity_3, extraCurricularActivity_3a, extraCurricularActivity_3b, extraCurricularActivity_3c, extraCurricularActivity_3d, extraCurricularActivity_3e);
-        const awardsAndAchievements = Array(awardsAndAchievements_1, awardsAndAchievements_1a, awardsAndAchievements_2, awardsAndAchievements_2a, awardsAndAchievements_3, awardsAndAchievements_3a);
+        const workExperience = Array(new listItem(workExperience_1, Array(workExperience_1a, workExperience_1b, workExperience_1c, workExperience_1d, workExperience_1e)),
+            new listItem(workExperience_2, Array(workExperience_2a, workExperience_2b, workExperience_2c, workExperience_2d, workExperience_2e)),
+            new listItem(workExperience_3, Array(workExperience_3a, workExperience_3b, workExperience_3c, workExperience_3d, workExperience_3e)));
+        const projects = Array(new listItem(project_1, Array(project_1a, project_1b, project_1c, project_1d, project_1e)),
+            new listItem(project_2, Array(project_2a, project_2b, project_2c, project_2d, project_2e)),
+            new listItem(project_3, Array(project_3a, project_3b, project_3c, project_3d, project_3e)));
+        const extraCurricularActivities = Array(new listItem(extraCurricularActivity_1, Array(extraCurricularActivity_1a, extraCurricularActivity_1b, extraCurricularActivity_1c, extraCurricularActivity_1d, extraCurricularActivity_1e)),
+            new listItem(extraCurricularActivity_2, Array(extraCurricularActivity_2a, extraCurricularActivity_2b, extraCurricularActivity_2c, extraCurricularActivity_2d, extraCurricularActivity_2e)),
+            new listItem(extraCurricularActivity_3, Array(extraCurricularActivity_3a, extraCurricularActivity_3b, extraCurricularActivity_3c, extraCurricularActivity_3d, extraCurricularActivity_3e)));
+        const awardsAndAchievements = Array(new listItem(awardsAndAchievements_1, Array(awardsAndAchievements_1a)), 
+            new listItem(awardsAndAchievements_2, Array(awardsAndAchievements_2a)), 
+            new listItem(awardsAndAchievements_3, Array(awardsAndAchievements_3a)));
         const resume = { title, name, phoneNumber, email, website, education, objectives, workExperience, projects, extraCurricularActivities, awardsAndAchievements }
         console.log(resume);
         console.log(JSON.stringify(resume));
