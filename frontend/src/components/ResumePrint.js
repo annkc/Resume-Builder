@@ -34,7 +34,8 @@ const ResumePrint = () => {
     
     const toReturn =
         <div className={styles.resume_print}>
-            <h1>{resume && resume.phoneNumber}</h1>
+            <h1>{resume && resume.name}</h1>
+            <p>{resume && resume.phoneNumber}</p>
             <p>{resume && resume.email}</p>
             <p>{resume && resume.website}</p>
             <p><strong>Education: </strong> {resume && resume.education}</p>

@@ -36,7 +36,8 @@ const ResumeDetails = () => {
         <div className={styles.resume_details}>
             <h4>{resume && resume.title}</h4>
             <p><strong>Created at:</strong> {resume && resume.createdAt}</p>
-            <p><strong>Name: </strong> {resume && resume.phoneNumber}</p>
+            <p><strong>Name: </strong> {resume && resume.name}</p>
+            <p><strong>Phone: </strong> {resume && resume.phoneNumber}</p>
             <p><strong>Email: </strong> {resume && resume.email}</p>
             <p><strong>Website: </strong> {resume && resume.website}</p>
             <p><strong>Education: </strong> {resume && resume.education}</p>
@@ -55,8 +56,8 @@ const ResumeDetails = () => {
 
             {(resume && resume.awardsAndAchievements && resume.awardsAndAchievements.length > 0) && <div><p><br></br><strong>Awards and Achievements:</strong></p> {resume.awardsAndAchievements.map(renderListItem)}</div>}
             
-            <Link to={`/resume-print/${id}`}>
-                <button>Print Layout</button>
+            <Link to={`/resume-print/${id}`} target='_blank'>
+                <button>Print with Browser</button>
             </Link>
         
         </div>
