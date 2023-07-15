@@ -55,8 +55,8 @@ const ResumeDetails = () => {
 
             {(resume && resume.awardsAndAchievements && resume.awardsAndAchievements.length > 0) && <div><p><br></br><strong>Awards and Achievements:</strong></p> {resume.awardsAndAchievements.map(renderListItem)}</div>}
             
-            <Link to={"/resume-print/"+resume._id}>
-                    <button>Get Started</button>
+            <Link to={`/resume-print/${id}`}>
+                <button>Print Layout</button>
             </Link>
         
         </div>
