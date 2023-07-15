@@ -6,10 +6,33 @@
     height: 1056px;
     background-color: white;
     padding-left: 30px;
+    padding-right: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
 .resume_print h1 {
     text-align: center;
+}
+
+.resume_print p {
+    size: 16px;
+}
+
+.contact_info {
+    display: table;
+    width: 100%;
+    /* table-layout: fixed; */
+}
+
+.contact_info span {
+    display: table-cell;
+    text-align: center;
+}
+
+.contact_info span:first-child {
+    text-align: left;
+}
+.contact_info span:last-child {
+    text-align: right;
 }
