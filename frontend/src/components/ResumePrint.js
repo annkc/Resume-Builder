@@ -1,9 +1,9 @@
 import { useState, useEffect} from "react";
-import { useParams, Link } from "react-router-dom";
-import styles from './ResumeDetails.module.css'
+import { useParams} from "react-router-dom";
+import styles from './ResumePrint.module.css'
 import listItem from './Form'
     
-const ResumeDetails = () => {
+const ResumePrint = () => {
     const {id} = useParams();
     const [resume, setResume] = useState(null);
     
@@ -33,12 +33,10 @@ const ResumeDetails = () => {
     }
     
     const toReturn =
-        <div className={styles.resume_details}>
-            <h4>{resume && resume.title}</h4>
-            <p><strong>Created at:</strong> {resume && resume.createdAt}</p>
-            <p><strong>Name: </strong> {resume && resume.phoneNumber}</p>
-            <p><strong>Email: </strong> {resume && resume.email}</p>
-            <p><strong>Website: </strong> {resume && resume.website}</p>
+        <div className={styles.resume_print}>
+            <h1>{resume && resume.phoneNumber}</h1>
+            <p>{resume && resume.email}</p>
+            <p>{resume && resume.website}</p>
             <p><strong>Education: </strong> {resume && resume.education}</p>
 
 
@@ -54,14 +52,9 @@ const ResumeDetails = () => {
             {(resume && resume.extraCurricularActivities && resume.extraCurricularActivities.length > 0) && <div><p><br></br><strong>Extracurricular Activities:</strong></p> {resume.extraCurricularActivities.map(renderListItem)}</div>}  
 
             {(resume && resume.awardsAndAchievements && resume.awardsAndAchievements.length > 0) && <div><p><br></br><strong>Awards and Achievements:</strong></p> {resume.awardsAndAchievements.map(renderListItem)}</div>}
-            
-            <Link to={"/resume-print/"+resume._id}>
-                    <button>Get Started</button>
-            </Link>
-        
         </div>
     
     return toReturn;
     
 }
-export default ResumeDetails;
+export default ResumePrint;
