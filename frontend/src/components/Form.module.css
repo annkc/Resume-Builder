@@ -11,14 +11,12 @@
 .form {
     font-family: 'Lexend', sans-serif;
     text-decoration: none;
-    width: 100%;
+    width: 98%;
     height: 100%;
-    /* background-color: white; */
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 10px;
-    /* box-shadow: 1px 2px 4px 0px darkgray; */
 }
 
 .form h3 {
