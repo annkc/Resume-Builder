@@ -43,22 +43,22 @@ const ResumePrint = () => {
                 </div>}
     
 
-            <h2><br></br>Education:</h2> 
+            <h3><br></br>Education:</h3> 
             <p>{resume && resume.education}</p>
 
 
-            {(resume && (resume.objectives[0] !== "" || resume.objectives[1] !== "")) && <h2><br></br>Objectives:</h2>}
+            {(resume && (resume.objectives[0] !== "" || resume.objectives[1] !== "")) && <h3><br></br>Objectives:</h3>}
             {resume && resume.objectives.map((objective) => {
                 return (<p> {objective} </p>);
             })}
 
-            {(resume && resume.workExperience && resume.workExperience.length > 0) && <div><h2><br></br>Work Experience:</h2> {resume.workExperience.map(renderListItem)}</div>}     
+            {(resume && resume.workExperience && resume.workExperience.length > 0) && <div><h3><br></br>Work Experience:</h3> {resume.workExperience.map(renderListItem)}</div>}     
 
-            {(resume && resume.projects && resume.projects.length > 0) && <div><h2><br></br>Projects:</h2> {resume.projects.map(renderListItem)}</div>}
+            {(resume && resume.projects && resume.projects.length > 0) && <div><h3><br></br>Projects:</h3> {resume.projects.map(renderListItem)}</div>}
 
-            {(resume && resume.extraCurricularActivities && resume.extraCurricularActivities.length > 0) && <div><h2><br></br>Extracurricular Activities:</h2> {resume.extraCurricularActivities.map(renderListItem)}</div>}  
+            {(resume && resume.extraCurricularActivities && resume.extraCurricularActivities.length > 0) && <div><h3><br></br>Extracurricular Activities:</h3> {resume.extraCurricularActivities.map(renderListItem)}</div>}  
 
-            {(resume && resume.awardsAndAchievements && resume.awardsAndAchievements.length > 0) && <div><h2><br></br>Awards and Achievements:</h2> {resume.awardsAndAchievements.map(renderListItem)}</div>}
+            {(resume && resume.awardsAndAchievements && resume.awardsAndAchievements.length > 0) && <div><h3><br></br>Awards and Achievements:</h3> {resume.awardsAndAchievements.map(renderListItem)}</div>}
         </div>
     
     return toReturn;
