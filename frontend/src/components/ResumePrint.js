@@ -29,7 +29,13 @@ const ResumePrint = () => {
     }
 
     function renderListItemDetail(detail) {
-        return (<li> {detail} </li>);
+        if (detail !== "") {
+            return (<li> {detail} </li>);
+        }
+    }
+
+    function joinListItem(item) {
+        return item.title + item.details.join('');
     }
     
     const toReturn =
@@ -43,22 +49,22 @@ const ResumePrint = () => {
                 </div>}
     
 
-            <h3><br></br>Education:</h3> 
+            <h3><br></br>Education</h3> 
             <p>{resume && resume.education}</p>
 
 
-            {(resume && (resume.objectives[0] !== "" || resume.objectives[1] !== "")) && <h3><br></br>Objectives:</h3>}
+            {(resume && resume.objectives.join('') !== "") && <h3><br></br>Objectives</h3>}
             {resume && resume.objectives.map((objective) => {
                 return (<p> {objective} </p>);
             })}
 
-            {(resume && resume.workExperience && resume.workExperience.length > 0) && <div><h3><br></br>Work Experience:</h3> {resume.workExperience.map(renderListItem)}</div>}     
+            {(resume && resume.workExperience && resume.workExperience.map(joinListItem).join('') !== "") && <div><h3><br></br>Work Experience</h3> {resume.workExperience.map(renderListItem)}</div>}     
 
-            {(resume && resume.projects && resume.projects.length > 0) && <div><h3><br></br>Projects:</h3> {resume.projects.map(renderListItem)}</div>}
+            {(resume && resume.projects && resume.projects.map(joinListItem).join('') !== "") && <div><h3><br></br>Projects</h3> {resume.projects.map(renderListItem)}</div>}
 
-            {(resume && resume.extraCurricularActivities && resume.extraCurricularActivities.length > 0) && <div><h3><br></br>Extracurricular Activities:</h3> {resume.extraCurricularActivities.map(renderListItem)}</div>}  
+            {(resume && resume.extraCurricularActivities && resume.extraCurricularActivities.map(joinListItem).join('') !== "") && <div><h3><br></br>Extracurricular Activities</h3> {resume.extraCurricularActivities.map(renderListItem)}</div>}  
 
-            {(resume && resume.awardsAndAchievements && resume.awardsAndAchievements.length > 0) && <div><h3><br></br>Awards and Achievements:</h3> {resume.awardsAndAchievements.map(renderListItem)}</div>}
+            {(resume && resume.awardsAndAchievements && resume.awardsAndAchievements.map(joinListItem).join('') !== "") && <div><h3><br></br>Awards and Achievements</h3> {resume.awardsAndAchievements.map(renderListItem)}</div>}
         </div>
     
     return toReturn;
