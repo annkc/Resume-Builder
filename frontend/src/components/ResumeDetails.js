@@ -29,7 +29,13 @@ const ResumeDetails = () => {
     }
 
     function renderListItemDetail(detail) {
-        return (<li> {detail} </li>);
+        if (detail !== "") {
+            return (<li> {detail} </li>);
+        }
+    }
+
+    function joinListItem(item) {
+        return item.title + item.details.join('');
     }
     
     const toReturn =
@@ -43,21 +49,25 @@ const ResumeDetails = () => {
             <p><strong>Education: </strong> {resume && resume.education}</p>
 
 
-            {(resume && (resume.objectives[0] !== "" || resume.objectives[1] !== "")) && <p><br></br><strong>Objectives:</strong></p>}
+            {(resume && resume.objectives.join('') !== "") && <p><br></br><strong>Objectives:</strong></p>}
             {resume && resume.objectives.map((objective) => {
                 return (<p> {objective} </p>);
             })}
 
-            {(resume && resume.workExperience && resume.workExperience.length > 0) && <div><p><br></br><strong>Work Experience:</strong></p> {resume.workExperience.map(renderListItem)}</div>}     
+            {(resume && resume.workExperience && resume.workExperience.map(joinListItem).join('') !== "") && <div><p><br></br><strong>Work Experience:</strong></p> {resume.workExperience.map(renderListItem)}</div>}     
 
-            {(resume && resume.projects && resume.projects.length > 0) && <div><p><br></br><strong>Projects:</strong></p> {resume.projects.map(renderListItem)}</div>}
+            {(resume && resume.projects && resume.projects.map(joinListItem).join('') !== "") && <div><p><br></br><strong>Projects:</strong></p> {resume.projects.map(renderListItem)}</div>}
 
-            {(resume && resume.extraCurricularActivities && resume.extraCurricularActivities.length > 0) && <div><p><br></br><strong>Extracurricular Activities:</strong></p> {resume.extraCurricularActivities.map(renderListItem)}</div>}  
+            {(resume && resume.extraCurricularActivities && resume.extraCurricularActivities.map(joinListItem).join('') !== "") && <div><p><br></br><strong>Extracurricular Activities:</strong></p> {resume.extraCurricularActivities.map(renderListItem)}</div>}  
 
-            {(resume && resume.awardsAndAchievements && resume.awardsAndAchievements.length > 0) && <div><p><br></br><strong>Awards and Achievements:</strong></p> {resume.awardsAndAchievements.map(renderListItem)}</div>}
+            {(resume && resume.awardsAndAchievements && resume.awardsAndAchievements.map(joinListItem).join('') !== "") && <div><p><br></br><strong>Awards and Achievements:</strong></p> {resume.awardsAndAchievements.map(renderListItem)}</div>}
             
             <Link to={`/resume-print/${id}`} target='_blank'>
-                <button>Print with Browser</button>
+                <br></br><button>Print with Browser</button>
+            </Link>
+            
+            <Link to={'/how-to-print'}>
+                <h3><br></br>See how to print with browser</h3>
             </Link>
         
         </div>
