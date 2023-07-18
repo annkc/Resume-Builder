@@ -107,6 +107,21 @@ export default function Form() {
         const awardsAndAchievements = Array(new listItem(awardsAndAchievements_1, Array(awardsAndAchievements_1a)), 
             new listItem(awardsAndAchievements_2, Array(awardsAndAchievements_2a)), 
             new listItem(awardsAndAchievements_3, Array(awardsAndAchievements_3a)));
+
+        const sections = Array(workExperience, projects, extraCurricularActivities, awardsAndAchievements);
+
+        for (let i = 0; i < sections.length; i++) {
+            let section = sections[i];
+            for (let j = 0; j < section.length; j++) {
+                let item = section[j];
+                if (item.title === "" && item.details.join('') !== "") {
+                    alert("Please make sure every item you have filled out in the Work Experience, Projects, Extracurricular Activities, and Awards and Achievements sections has a title, then try again!");
+                    return;
+                }
+            }
+        }
+
+
         const resume = { title, name, phoneNumber, email, website, education, objectives, workExperience, projects, extraCurricularActivities, awardsAndAchievements }
         console.log(resume);
         console.log(JSON.stringify(resume));
@@ -117,6 +132,7 @@ export default function Form() {
             body: JSON.stringify(resume)
         }).then(() => {
             console.log('new resume added');
+            alert("Resume successfully created! It can be viewed under the Resumes section.");
         })
         
         
