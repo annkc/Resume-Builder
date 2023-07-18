@@ -146,6 +146,7 @@ export default function Form() {
                 type="text"
                 required
                 value={title}
+                placeholder="Required"
                 onChange={(e) => setTitle(e.target.value)}
             />
             <label>Name:</label>
@@ -153,6 +154,7 @@ export default function Form() {
                 type="text"
                 required
                 value={name}
+                placeholder="Required"
                 onChange={(e) => setName(e.target.value)}
             />
             <label>Phone number:</label>
@@ -160,6 +162,7 @@ export default function Form() {
                 type="text"
                 required
                 value={phoneNumber}
+                placeholder="Required"
                 onChange={(e) => setPhoneNumber(e.target.value)}
             />
             <label>Email:</label>
@@ -167,6 +170,7 @@ export default function Form() {
                 type="text"
                 required
                 value={email}
+                placeholder="Required"
                 onChange={(e) => setEmail(e.target.value)}
             />
             <label>Website Link:</label>
@@ -199,26 +203,32 @@ export default function Form() {
             <input
                 type="text"
                 value={workExperience_1}
+                placeholder="Item title (and date)"
                 onChange={(e) => setWorkExperience_1(e.target.value)}
             />
             <textarea
                 value={workExperience_1a}
+                placeholder="Item bullet point"
                 onChange={(e) => setWorkExperience_1a(e.target.value)}
             ></textarea>
             <textarea
                 value={workExperience_1b}
+                placeholder="Item bullet point"
                 onChange={(e) => setWorkExperience_1b(e.target.value)}
             ></textarea>
             <textarea
                 value={workExperience_1c}
+                placeholder="Item bullet point"
                 onChange={(e) => setWorkExperience_1c(e.target.value)}
             ></textarea>
             <textarea
                 value={workExperience_1d}
+                placeholder="Item bullet point"
                 onChange={(e) => setWorkExperience_1d(e.target.value)}
             ></textarea>
             <textarea
                 value={workExperience_1e}
+                placeholder="Item bullet point"
                 onChange={(e) => setWorkExperience_1e(e.target.value)}
             ></textarea>
             <label>Work Experience 2:</label>
