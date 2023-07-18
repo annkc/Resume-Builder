@@ -34,5 +34,5 @@
     text-align: left;
 }
 .contact_info span:last-child {
-    text-align: right;
+    text-align: end;
 }

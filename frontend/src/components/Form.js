@@ -163,6 +163,7 @@ export default function Form() {
                 required
                 value={phoneNumber}
                 placeholder="Required"
+                maxLength={20}
                 onChange={(e) => setPhoneNumber(e.target.value)}
             />
             <label>Email:</label>
@@ -171,12 +172,14 @@ export default function Form() {
                 required
                 value={email}
                 placeholder="Required"
+                maxLength={30}
                 onChange={(e) => setEmail(e.target.value)}
             />
             <label>Website Link:</label>
             <input
                 type="text"
                 value={website}
+                maxLength={30}
                 onChange={(e) => setWebsite(e.target.value)}
             />
             <label>Education:</label>

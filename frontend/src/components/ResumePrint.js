@@ -45,12 +45,15 @@ const ResumePrint = () => {
             {resume && <div className={styles.contact_info}>
                 <span>{resume.phoneNumber}</span> 
                 <span>{resume.email}</span> 
-                <span>{resume.website}</span>
+                {resume.website !== "" && <span>{resume.website}</span>}
                 </div>}
     
 
-            <h3><br></br>Education</h3> 
-            <p>{resume && resume.education}</p>
+            {resume && resume.education && resume.education !== "" &&
+            <div>
+                <h3><br></br>Education</h3> 
+                <p>{resume && resume.education}</p>
+                </div>}
 
 
             {(resume && resume.objectives.join('') !== "") && <h3><br></br>Objectives</h3>}
