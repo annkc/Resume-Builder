@@ -16,3 +16,20 @@
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+.resume_details button {
+    color: white;
+    display: inline;
+    background: rgb(0,9,50);
+    background: linear-gradient(90deg, rgba(9,30,121,1) 0%, rgb(12, 104, 175) 20%, rgb(0, 136, 255) 50%, rgb(12, 104, 175) 80%, rgba(9,30,121,1) 100%);
+    background-color: rgb(255, 189, 114);
+    border: none;
+    border-radius: 5px;
+    font-family: 'Lexend', sans-serif;
+    font-size: 20px;
+    padding: 0px;
+
+    margin: 10px;
+    width: 250px;
+    height: 50px;
+}

@@ -63,7 +63,7 @@ const ResumeDetails = () => {
             {(resume && resume.awardsAndAchievements && resume.awardsAndAchievements.map(joinListItem).join('') !== "") && <div><p><br></br><strong>Awards and Achievements:</strong></p> {resume.awardsAndAchievements.map(renderListItem)}</div>}
             
             <Link to={`/resume-print/${id}`} target='_blank'>
-                <br></br><button>Print with Browser</button>
+                <br></br><button>Open Page For Printing</button>
             </Link>
             
             <Link to={'/how-to-print'}>
