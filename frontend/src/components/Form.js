@@ -162,7 +162,7 @@ export default function Form() {
                 type="text"
                 required
                 value={phoneNumber}
-                placeholder="Required"
+                placeholder="Required - Max 20 characters"
                 maxLength={20}
                 onChange={(e) => setPhoneNumber(e.target.value)}
             />
@@ -171,7 +171,7 @@ export default function Form() {
                 type="text"
                 required
                 value={email}
-                placeholder="Required"
+                placeholder="Required - Max 30 characters"
                 maxLength={30}
                 onChange={(e) => setEmail(e.target.value)}
             />
@@ -179,6 +179,7 @@ export default function Form() {
             <input
                 type="text"
                 value={website}
+                placeholder="Max 30 characters"
                 maxLength={30}
                 onChange={(e) => setWebsite(e.target.value)}
             />
