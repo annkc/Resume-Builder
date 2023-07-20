@@ -66,7 +66,7 @@ const ResumeDetails = () => {
                 <br></br><button>Open Page For Printing</button>
             </Link>
             
-            <Link to={'/how-to-print'}>
+            <Link to={'/guide'}>
                 <h3><br></br>See how to print with browser</h3>
             </Link>
         

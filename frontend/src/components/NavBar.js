@@ -15,6 +15,7 @@ export default function NavBar() {
             <ul><a href="/home">Home</a></ul>
             <ul><a href="/create-resume">Create</a></ul>
             <ul><a href="/resumes">Resumes</a></ul>
+            <ul><a href="/guide">Guide</a></ul>
             <ul><a href="/about">About</a></ul>
         </li>
         </div>
