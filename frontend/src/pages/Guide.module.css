@@ -9,3 +9,7 @@
 .guide h2 {
     text-align: center;
 }
+
+.guide img {
+    width: 45%;
+}
