@@ -7,17 +7,15 @@ const Guide = () => {
             <h2>How to use the Resume Builder</h2>
             <h3><br></br>Creating a Resume</h3>
             <p>Simply fill out the blanks in the form given. The first few required fields 
-                are marked as such, and the rest can are optional and you are free to fill them in 
+                are marked as such, while the rest are optional and you are free to fill them in 
                 or not.</p>
-            {/* picture of some stuff filled out */}
-            <div>
+            <div className={styles.creation_imgs}>
                 <span><img src ="/images/creation_example_1.png" alt=""/></span>
                 <span><img src ="/images/creation_example_2.png" alt=""/></span>
             </div>
 
-            <p>However, please make sure every list item has a title. For example:</p>
-            {/* picture of what is acceptable and what is not */}
-            <div>
+            <p>However, please make sure every list item that you fill out has a title. For example:</p>
+            <div className={styles.creation_imgs}>
                 <span><img src ="/images/creation_example_incorrect.png" alt=""/></span>
                 <span><img src ="/images/creation_example_correct.png" alt=""/></span>
             </div>
@@ -30,6 +28,7 @@ const Guide = () => {
             <p>To find the option to print in your browser, use the shortcut Ctrl + P, or 
                 ⌘ Command + P for iOS, which may bring it up in your browser. If not, it can be 
                 found in your browser's settings.</p>
+            <img src ="/images/print_example.png" alt=""/>
             <p>Before clicking the print button, select the printer option that would save/print as 
                 a PDF, and for the other options, be sure to not include the background graphics or 
                 the header/footers. Feel free to also adjust the margins to your preferences.</p>

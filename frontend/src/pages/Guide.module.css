@@ -11,5 +11,13 @@
 }
 
 .guide img {
-    width: 45%;
+    align-self: center;
+    width: 95%;
+    padding: 20px;
 }
+
+.creation_imgs img {
+    width: 45%;
+    padding: 20px;
+}
+
