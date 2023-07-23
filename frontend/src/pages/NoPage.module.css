@@ -2,23 +2,26 @@
 
 .noPage {
     margin: 0;
-    align-items: center;
+    justify-content: center;
 }
+
 .error_title {
     display: flex;
     justify-content: center;
-    padding-left: 100px;
+    padding: 20px;
     font-size: 25px;
+    font-family: 'Lexend', sans-serif;
 }
 .error_message {
     display: flex;
     justify-content: center;
-    padding-left: 100px;
+    align-self: center;
     font-family: 'Lexend', sans-serif;
 }
 
 .noPage img {
-    align-items: center;
-    padding-left: 550px;
-    height: 500px;
+    display:block;
+    margin: auto;
+    width: 35%;
+    
 }
