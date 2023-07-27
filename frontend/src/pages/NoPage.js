@@ -1,4 +1,12 @@
 import styles from './NoPage.module.css'
+
+/**
+ * The 404 error page that displays when the user tries to visit a URL that doesn't lead to 
+ * an existing page.
+ * 
+ * @returns {div} display of 404 page
+ */
+
 const NoPage = () => {
     return (
         <div className={styles.noPage}>

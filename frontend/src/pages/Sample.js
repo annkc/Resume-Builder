@@ -1,5 +1,10 @@
 import styles from '../components/ResumePrint.module.css'
 
+/**
+ * Page that displays a sample resume, formatted to be saved as a PDF.
+ * 
+ * @returns {div} sample resume page
+ */
 const Sample = () => {
     return (
         <div className={styles.resume_print}>

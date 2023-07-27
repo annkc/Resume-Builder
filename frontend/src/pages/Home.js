@@ -1,6 +1,12 @@
 import {Link} from 'react-router-dom';
 import styles from './Home.module.css'
 
+/**
+ * The website's home page. This is where users start off.
+ * 
+ * @returns {div} display of home page
+ */
+
 const Home = () => {
     return (
         <div className={styles.home}>

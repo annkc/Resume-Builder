@@ -1,6 +1,12 @@
 import styles from './Guide.module.css'
 import { Link } from "react-router-dom";
 
+/**
+ * The page that details how to fill out the resume creation form as well as how to print out a
+ * completed resume with their browser.
+ * 
+ * @returns {div} display of guide page
+ */
 const Guide = () => {
     return (
         <div className={styles.guide}>

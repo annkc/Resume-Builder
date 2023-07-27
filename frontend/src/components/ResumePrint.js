@@ -1,12 +1,21 @@
 import { useState, useEffect} from "react";
 import { useParams} from "react-router-dom";
 import styles from './ResumePrint.module.css'
-import listItem from './Form'
-    
+import { listItem } from "./Form";
+
+/**
+ * Displays the part of a resume's information that appears in the formatted version to be saved
+ * as a PDF.
+ * 
+ * @returns {div} display of most of the resume's details to be in PDF
+ */    
 const ResumePrint = () => {
     const {id} = useParams();
     const [resume, setResume] = useState(null);
     
+    /**
+     * Fetching the specific resume from the database.
+     */
     const fetchResume = async () => {
         console.log("fetching....")
         const response = await fetch('http://localhost:4000/api/resumes/' + id);
@@ -21,6 +30,12 @@ const ResumePrint = () => {
         fetchResume();
     }, [])
 
+    /**
+     * Displaya a listItem on the page.
+     * 
+     * @param {listItem} item 
+     * @returns {div} display of item
+     */
     function renderListItem(item) {
         return <div>
             <p>{item.title}</p>
@@ -28,12 +43,24 @@ const ResumePrint = () => {
         </div>
     }
 
+    /**
+     * Displays a detail of a listItem on the page.
+     * 
+     * @param {string} detail 
+     * @returns {li} display of detail
+     */
     function renderListItemDetail(detail) {
         if (detail !== "") {
             return (<li> {detail} </li>);
         }
     }
 
+    /**
+     * Creates a string of all the data in a listItem concatenated together.
+     * 
+     * @param {listItem} item 
+     * @returns {string} item's fields concatenated
+     */
     function joinListItem(item) {
         return item.title + item.details.join('');
     }

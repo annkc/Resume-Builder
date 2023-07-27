@@ -1,6 +1,12 @@
 import {Link} from 'react-router-dom';
 import styles from './NavBar.module.css'
 
+
+/**
+ * The navigation bar that allows the user to navigate to different pages.
+ * 
+ * @returns {div} display of navigation bar 
+ */
 export default function NavBar() {
     return (
     <div className={styles.nav_container}>

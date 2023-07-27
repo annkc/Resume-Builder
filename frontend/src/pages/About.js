@@ -1,5 +1,10 @@
 import styles from './About.module.css'
 
+/**
+ * The about page that gives details about this project.
+ * 
+ * @returns {div} display of about page
+ */
 const About = () => {
     return (
         <div className={styles.about}>

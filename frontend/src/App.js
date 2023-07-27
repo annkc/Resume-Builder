@@ -10,6 +10,11 @@ import ResumePrint from './components/ResumePrint'
 import NoPage from './pages/NoPage'
 import NavBar from './components/NavBar'
 
+/**
+ * The whole web application's display.
+ * 
+ * @returns {div} display of the website
+ */
 function App() {
   return (
     <div className="App">

@@ -2,25 +2,42 @@ import styles from './Form.module.css'
 import { useState } from "react";
 
 
+/**
+ * Class that represents a list item, with a title and a list of details.
+ * 
+ * Used in the "Work Experience", "Projects", "Extracurricular Activities", and "awards and 
+ * Achievements" sections of the resume 
+ * 
+ * @typedef {Object} listItem
+ * @property {string} title title of the list item
+ * @property {string[]} details list of details about the list item
+ * 
+ */
+
 class listItem {
 
     title;
     details;
 
+    /**
+     * Constructs a listItem object with a title and list of details.
+     * 
+     * @param {string} title 
+     * @param {string[]} details
+     */
     constructor(title, details) {
       this.title = title;
       this.details = details;
     }
-
-    // getTitle() {
-    //   return this.#title;
-    // }
-
-    // getDetails() {
-    //   return this.#details;
-    // }
   }
 
+
+/**
+ * The form provided to the user in the Create page. Gives them inputs to fill out the information
+ * that they want on their resume.
+ * 
+ * @returns {div} form that takes string user inputs
+ */
 
 export default function Form() {
     const [title, setTitle] = useState('');
@@ -92,6 +109,14 @@ export default function Form() {
     const [awardsAndAchievements_3, setAwardsAndAchievements_3] = useState('');
     const [awardsAndAchievements_3a, setAwardsAndAchievements_3a] = useState('');
 
+
+    /**
+     * Handles the submission of the form when the submit button is pressed. Creates a resume from
+     * the user input and posts it to the database.
+     * 
+     * @param {*} e 
+     */
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const objectives = Array(objective_1, objective_2);
@@ -126,6 +151,11 @@ export default function Form() {
         console.log(resume);
         console.log(JSON.stringify(resume));
         
+
+        /**
+         * Posts the resume created from the form input to the database.
+         */
+
         const fetchResponse = await fetch('http://localhost:4000/api/resumes/', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
